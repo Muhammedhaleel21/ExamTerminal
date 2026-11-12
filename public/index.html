@@ -44,74 +44,6 @@
       margin: 0 auto;
     }
 
-    /* Header */
-    header {
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2rem;
-    }
-
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .title-group {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .title-icon {
-      width: 32px;
-      height: 32px;
-      stroke: var(--text-main);
-      stroke-width: 1.75;
-      fill: none;
-    }
-
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      color: var(--text-main);
-    }
-
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 0.975rem;
-      max-width: 650px;
-    }
-
-    .stats-bar {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1.25rem;
-      padding-top: 1.25rem;
-      border-top: 1px dashed var(--border);
-      font-size: 0.875rem;
-    }
-
-    .stat-item {
-      display: flex;
-      align-items: baseline;
-      gap: 0.4rem;
-    }
-
-    .stat-num {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--text-main);
-    }
-
-    .stat-label {
-      color: var(--text-muted);
-    }
-
     /* Terminal Downloader Box */
     .terminal-card {
       background: var(--card-bg);
@@ -218,37 +150,6 @@
       stroke: currentColor;
       fill: none;
       stroke-width: 2;
-    }
-
-    .tab-instruction {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    .feature-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.75rem;
-      padding: 1rem 1.25rem;
-      background: var(--subtle-bg);
-      border-top: 1px solid var(--border);
-      font-size: 0.825rem;
-      color: var(--text-muted);
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .feature-item svg {
-      width: 14px;
-      height: 14px;
-      stroke: var(--text-main);
-      stroke-width: 2;
-      flex-shrink: 0;
     }
 
     /* Repository Section */
@@ -555,45 +456,11 @@
         padding: 0.65rem 1rem;
         justify-content: center;
       }
-
-      .stats-bar {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <div class="header-top">
-        <div class="title-group">
-          <svg class="title-icon" viewBox="0 0 24 24">
-            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-          </svg>
-          <h1>My File Repository</h1>
-        </div>
-      </div>
-      <p class="subtitle">
-        Organized repository of educational notes and TXT documents. Download files via the short one-line terminal commands below or explore folders directly.
-      </p>
-
-      <div class="stats-bar">
-        <div class="stat-item">
-          <span class="stat-num" id="totalFilesDisplay">...</span>
-          <span class="stat-label">total files</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" id="totalFoldersDisplay">...</span>
-          <span class="stat-label">folders</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">Zero</span>
-          <span class="stat-label">installations required</span>
-        </div>
-      </div>
-    </header>
-
     <!-- Terminal Downloader Section -->
     <section class="terminal-card">
       <div class="card-header">
@@ -621,25 +488,6 @@
             </svg>
             <span id="copyText">Copy</span>
           </button>
-        </div>
-
-        <p class="tab-instruction" id="tabInstruction">
-          Run in PowerShell. Downloads all TXT files into a <code>MyFiles</code> folder in your current directory while preserving folder structure.
-        </p>
-      </div>
-
-      <div class="feature-list">
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Preserves folder structures
-        </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Safely avoids overwriting existing files
-        </div>
-        <div class="feature-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Real-time progress reporting
         </div>
       </div>
     </section>
@@ -673,21 +521,22 @@
       <div class="modal-box">
         <div class="modal-header">
           <span class="modal-title" id="modalFileName">file.txt</span>
-          <button class="modal-close" onclick="closeModal()">&times;</button>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button class="file-btn" id="btnCopyModal" onclick="copyModalContent()" title="Copy file content">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copyModalText">Copy</span>
+            </button>
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+          </div>
         </div>
         <div class="modal-body" id="modalFileContent">Loading...</div>
       </div>
     </div>
 
     <footer>
-      <div class="guide-box">
-        <div class="guide-title">How to manage files:</div>
-        <ol class="guide-steps">
-          <li>Open <code>public/downloads/</code> in your repository.</li>
-          <li>Add or edit <code>.txt</code> files inside existing folders or create new folders as desired.</li>
-          <li>Deploy to Vercel, Netlify, or run <code>npm run build</code>. The manifest and downloaders update automatically!</li>
-        </ol>
-      </div>
       <p style="margin-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--text-subtle);">
         ExamTerminal File Hosting &bull; Static, Fast &amp; Zero Dependencies
       </p>
@@ -710,14 +559,11 @@
 
       const origin = getBaseUrl();
       const commandEl = document.getElementById('commandDisplay');
-      const instructionEl = document.getElementById('tabInstruction');
 
       if (os === 'powershell') {
         commandEl.textContent = `irm ${origin}/get.ps1 | iex`;
-        instructionEl.innerHTML = `Paste into <strong>Windows PowerShell</strong>. Automatically downloads all TXT files into <code>./MyFiles/</code> preserving folder hierarchies.`;
       } else {
         commandEl.textContent = `curl -fsSL ${origin}/get | bash`;
-        instructionEl.innerHTML = `Run in terminal on <strong>Linux or macOS</strong>. Uses native <code>curl</code> and <code>bash</code> with zero extra dependencies.`;
       }
     }
 
@@ -763,9 +609,6 @@
     }
 
     function renderRepository(manifest) {
-      document.getElementById('totalFilesDisplay').textContent = manifest.totalFiles;
-      document.getElementById('totalFoldersDisplay').textContent = manifest.totalFolders;
-
       const container = document.getElementById('foldersContainer');
       container.innerHTML = '';
 
@@ -834,6 +677,8 @@
     async function previewFile(urlPath, fileName) {
       document.getElementById('modalFileName').textContent = fileName;
       document.getElementById('modalFileContent').textContent = 'Loading content...';
+      const copyText = document.getElementById('copyModalText');
+      if (copyText) copyText.textContent = 'Copy';
       document.getElementById('previewModal').classList.add('active');
 
       try {
@@ -843,6 +688,25 @@
         document.getElementById('modalFileContent').textContent = text;
       } catch (e) {
         document.getElementById('modalFileContent').textContent = 'Error loading file: ' + e.message;
+      }
+    }
+
+    async function copyModalContent() {
+      const content = document.getElementById('modalFileContent').textContent;
+      const copyText = document.getElementById('copyModalText');
+      try {
+        await navigator.clipboard.writeText(content);
+        if (copyText) copyText.textContent = 'Copied!';
+        setTimeout(() => { if (copyText) copyText.textContent = 'Copy'; }, 2000);
+      } catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = content;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        if (copyText) copyText.textContent = 'Copied!';
+        setTimeout(() => { if (copyText) copyText.textContent = 'Copy'; }, 2000);
       }
     }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T11:29:10.232Z",
+  "generatedAt": "2026-11-12T11:52:39.875Z",
   "totalFiles": 7,
   "totalFolders": 3,
   "folders": [
@@ -12,18 +12,18 @@
           "folder": "Data Mining",
           "relativePath": "Data Mining/Module 1.txt",
           "urlPath": "Data%20Mining/Module%201.txt",
-          "size": 586,
-          "formattedSize": "586 B",
-          "lastModified": "2026-11-12T11:21:23.193Z"
+          "size": 587,
+          "formattedSize": "587 B",
+          "lastModified": "2026-11-12T11:29:37.523Z"
         },
         {
           "name": "Questions.txt",
           "folder": "Data Mining",
           "relativePath": "Data Mining/Questions.txt",
           "urlPath": "Data%20Mining/Questions.txt",
-          "size": 769,
-          "formattedSize": "769 B",
-          "lastModified": "2026-11-12T11:21:51.624Z"
+          "size": 770,
+          "formattedSize": "770 B",
+          "lastModified": "2026-11-12T11:29:37.571Z"
         }
       ]
     },
@@ -36,27 +36,27 @@
           "folder": "Machine learning",
           "relativePath": "Machine learning/Module 1.txt",
           "urlPath": "Machine%20learning/Module%201.txt",
-          "size": 767,
-          "formattedSize": "767 B",
-          "lastModified": "2026-11-12T11:21:04.734Z"
+          "size": 768,
+          "formattedSize": "768 B",
+          "lastModified": "2026-11-12T11:29:37.637Z"
         },
         {
           "name": "Module 2.txt",
           "folder": "Machine learning",
           "relativePath": "Machine learning/Module 2.txt",
           "urlPath": "Machine%20learning/Module%202.txt",
-          "size": 797,
-          "formattedSize": "797 B",
-          "lastModified": "2026-11-12T11:21:10.845Z"
+          "size": 798,
+          "formattedSize": "798 B",
+          "lastModified": "2026-11-12T11:29:37.681Z"
         },
         {
           "name": "Module 3.txt",
           "folder": "Machine learning",
           "relativePath": "Machine learning/Module 3.txt",
           "urlPath": "Machine%20learning/Module%203.txt",
-          "size": 682,
-          "formattedSize": "682 B",
-          "lastModified": "2026-11-12T11:21:16.882Z"
+          "size": 683,
+          "formattedSize": "683 B",
+          "lastModified": "2026-11-12T11:29:37.741Z"
         }
       ]
     },
@@ -69,18 +69,18 @@
           "folder": "Python",
           "relativePath": "Python/Advanced.txt",
           "urlPath": "Python/Advanced.txt",
-          "size": 648,
-          "formattedSize": "648 B",
-          "lastModified": "2026-11-12T11:22:06.991Z"
+          "size": 649,
+          "formattedSize": "649 B",
+          "lastModified": "2026-11-12T11:29:37.793Z"
         },
         {
           "name": "Basics.txt",
           "folder": "Python",
           "relativePath": "Python/Basics.txt",
           "urlPath": "Python/Basics.txt",
-          "size": 482,
-          "formattedSize": "482 B",
-          "lastModified": "2026-11-12T11:22:00.155Z"
+          "size": 483,
+          "formattedSize": "483 B",
+          "lastModified": "2026-11-12T11:29:37.834Z"
         }
       ]
     }
@@ -91,63 +91,63 @@
       "folder": "Data Mining",
       "relativePath": "Data Mining/Module 1.txt",
       "urlPath": "Data%20Mining/Module%201.txt",
-      "size": 586,
-      "formattedSize": "586 B",
-      "lastModified": "2026-11-12T11:21:23.193Z"
+      "size": 587,
+      "formattedSize": "587 B",
+      "lastModified": "2026-11-12T11:29:37.523Z"
     },
     {
       "name": "Questions.txt",
       "folder": "Data Mining",
       "relativePath": "Data Mining/Questions.txt",
       "urlPath": "Data%20Mining/Questions.txt",
-      "size": 769,
-      "formattedSize": "769 B",
-      "lastModified": "2026-11-12T11:21:51.624Z"
+      "size": 770,
+      "formattedSize": "770 B",
+      "lastModified": "2026-11-12T11:29:37.571Z"
     },
     {
       "name": "Module 1.txt",
       "folder": "Machine learning",
       "relativePath": "Machine learning/Module 1.txt",
       "urlPath": "Machine%20learning/Module%201.txt",
-      "size": 767,
-      "formattedSize": "767 B",
-      "lastModified": "2026-11-12T11:21:04.734Z"
+      "size": 768,
+      "formattedSize": "768 B",
+      "lastModified": "2026-11-12T11:29:37.637Z"
     },
     {
       "name": "Module 2.txt",
       "folder": "Machine learning",
       "relativePath": "Machine learning/Module 2.txt",
       "urlPath": "Machine%20learning/Module%202.txt",
-      "size": 797,
-      "formattedSize": "797 B",
-      "lastModified": "2026-11-12T11:21:10.845Z"
+      "size": 798,
+      "formattedSize": "798 B",
+      "lastModified": "2026-11-12T11:29:37.681Z"
     },
     {
       "name": "Module 3.txt",
       "folder": "Machine learning",
       "relativePath": "Machine learning/Module 3.txt",
       "urlPath": "Machine%20learning/Module%203.txt",
-      "size": 682,
-      "formattedSize": "682 B",
-      "lastModified": "2026-11-12T11:21:16.882Z"
+      "size": 683,
+      "formattedSize": "683 B",
+      "lastModified": "2026-11-12T11:29:37.741Z"
     },
     {
       "name": "Advanced.txt",
       "folder": "Python",
       "relativePath": "Python/Advanced.txt",
       "urlPath": "Python/Advanced.txt",
-      "size": 648,
-      "formattedSize": "648 B",
-      "lastModified": "2026-11-12T11:22:06.991Z"
+      "size": 649,
+      "formattedSize": "649 B",
+      "lastModified": "2026-11-12T11:29:37.793Z"
     },
     {
       "name": "Basics.txt",
       "folder": "Python",
       "relativePath": "Python/Basics.txt",
       "urlPath": "Python/Basics.txt",
-      "size": 482,
-      "formattedSize": "482 B",
-      "lastModified": "2026-11-12T11:22:00.155Z"
+      "size": 483,
+      "formattedSize": "483 B",
+      "lastModified": "2026-11-12T11:29:37.834Z"
     }
   ]
 }
