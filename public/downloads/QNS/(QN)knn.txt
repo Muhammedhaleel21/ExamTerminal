@@ -1,0 +1,62 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+train_data = pd.read_csv("fashion-mnist_train.csv")
+test_data = pd.read_csv("fashion-mnist_test.csv")
+
+# Separate features and labels
+X_train = train_data.drop("label", axis=1)
+y_train = train_data["label"]
+
+X_test = test_data.drop("label", axis=1)
+y_test = test_data["label"]
+
+# Select small subset
+X_train = X_train.iloc[:5000]
+y_train = y_train.iloc[:5000]
+
+X_test = X_test.iloc[:1000]
+y_test = y_test.iloc[:1000]
+
+# Normalize pixel values
+X_train = X_train / 255.0
+X_test = X_test / 255.0
+
+# Fashion MNIST class names
+class_names = [
+    'T-shirt/top', 'Trouser', 'Pullover', 'Dress',
+    'Coat', 'Sandal', 'Shirt', 'Sneaker',
+    'Bag', 'Ankle boot'
+]
+
+# Test different K values
+for k in [1, 3, 5, 7]:
+
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(X_train, y_train)
+
+    pred = knn.predict(X_test)
+
+    accuracy = accuracy_score(y_test, pred)
+
+    print(f"K={k} Accuracy: {accuracy:.2f}")
+
+# Display test images with predictions
+plt.figure(figsize=(10, 5))
+
+for i in range(10):
+    image = X_test.iloc[i].values.reshape(28, 28)
+
+    actual = class_names[y_test.iloc[i]]
+    predicted = class_names[pred[i]]
+
+    plt.subplot(2, 5, i + 1)
+    plt.imshow(image, cmap='gray')
+    plt.title(f"Actual: {actual}\nPredicted: {predicted}")
+    plt.axis('off')
+
+plt.tight_layout()
+plt.show()

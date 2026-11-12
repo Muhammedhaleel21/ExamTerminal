@@ -1,0 +1,33 @@
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+from sklearn.metrics import accuracy_score
+import pandas as pd
+
+data = pd.read_csv("20NewsGroups1.csv")
+
+filtered_data = data[data['category'].isin(['sci.space', 'rec.autos'])]
+
+X = filtered_data['text']
+y = filtered_data['category']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=9
+)
+
+vec_multi = CountVectorizer()
+
+X_train_m = vec_multi.fit_transform(X_train)
+X_test_m = vec_multi.transform(X_test)
+
+vec_bern = CountVectorizer(binary=True)
+
+X_train_b = vec_bern.fit_transform(X_train)
+X_test_b = vec_bern.transform(X_test)
+
+m_nb = MultinomialNB().fit(X_train_m, y_train)
+b_nb = BernoulliNB().fit(X_train_b, y_train)
+
+print(f"Multinomial Accuracy: {accuracy_score(y_test, m_nb.predict(X_test_m)):.2f}")
+
+print(f"Bernoulli Accuracy: {accuracy_score(y_test, b_nb.predict(X_test_b)):.2f}")

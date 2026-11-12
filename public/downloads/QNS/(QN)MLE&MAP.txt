@@ -1,0 +1,55 @@
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import CountVectorizer
+import numpy as np
+
+# Select two categories
+categories = ['alt.atheism', 'soc.religion.christian']
+
+# Load dataset
+newsgroups = fetch_20newsgroups(
+    subset='train',
+    categories=categories
+)
+
+# Convert text into word counts
+vectorizer = CountVectorizer(stop_words='english')
+X = vectorizer.fit_transform(newsgroups.data)
+
+# Select one category
+category = 'alt.atheism'
+category_index = newsgroups.target_names.index(category)
+
+# Get word counts for selected category
+X_category = X[newsgroups.target == category_index]
+
+word_counts = np.asarray(X_category.sum(axis=0)).flatten()
+
+# Vocabulary
+words = vectorizer.get_feature_names_out()
+
+# Total word count
+total_words = word_counts.sum()
+vocab_size = len(words)
+
+# MLE probabilities
+mle_prob = word_counts / total_words
+
+print("MLE Word Probabilities:")
+for word in ['god', 'religion', 'atheism', 'people']:
+    index = np.where(words == word)[0]
+    if len(index) > 0:
+        print(word, ":", mle_prob[index[0]])
+
+# MAP probabilities using Dirichlet priors
+for alpha in [0.5, 1, 2]:
+
+    map_prob = (word_counts + alpha) / (
+        total_words + alpha * vocab_size
+    )
+
+    print("\nMAP Probabilities (alpha =", alpha, "):")
+
+    for word in ['god', 'religion', 'atheism', 'people']:
+        index = np.where(words == word)[0]
+        if len(index) > 0:
+            print(word, ":", map_prob[index[0]])

@@ -1,0 +1,55 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression, RidgeCV, LassoCV
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import mean_squared_error, r2_score
+
+# 1. Load the dataset
+data = pd.read_csv(r"C:\Users\Farisa\Downloads\archive (1)\diabetes.csv")
+
+# Last column is the target
+X = data.iloc[:, :-1]
+y = data.iloc[:, -1]
+
+# 2. Split the dataset
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# 3. Standardize the data
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# 4. Linear Regression
+lin = LinearRegression().fit(X_train, y_train)
+
+# 5. Ridge and Lasso Regression
+ridge = RidgeCV(alphas=[0.1, 1.0, 10.0]).fit(X_train, y_train)
+lasso = LassoCV(cv=5).fit(X_train, y_train)
+
+# 6. Compare the models
+for name, model in [('Linear', lin), ('Ridge', ridge),
+                    ('Lasso', lasso)]:
+
+    pred = model.predict(X_test)
+
+    print(f"{name} - MSE: {mean_squared_error(y_test, pred):.2f}, R2: {r2_score(y_test, pred):.2f}")
+
+# 7. Plot Actual vs Predicted Values
+for name, model in [('Linear', lin), ('Ridge', ridge),
+                    ('Lasso', lasso)]:
+
+    pred = model.predict(X_test)
+
+    plt.figure()
+    plt.scatter(y_test, pred)
+    plt.xlabel("Actual Values")
+    plt.ylabel("Predicted Values")
+    plt.title(name + " Regression")
+    plt.plot([y_test.min(), y_test.max()],
+             [y_test.min(), y_test.max()], 'r--')
+    plt.show()

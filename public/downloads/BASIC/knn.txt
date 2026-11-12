@@ -1,0 +1,30 @@
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+import pandas as pd
+
+train_data = pd.read_csv("fashion-mnist_train.csv")
+test_data = pd.read_csv("fashion-mnist_test.csv")
+
+X_train = train_data.drop("label", axis=1)
+y_train = train_data["label"]
+
+X_test = test_data.drop("label", axis=1)
+y_test = test_data["label"]
+
+X_train = X_train.iloc[ :5000]
+y_train = y_train.iloc[ :5000]
+
+X_test = X_test.iloc[ :1000]
+y_test = y_test.iloc[ :1000]
+
+X_train = X_train / 255.0
+X_test = X_test / 255.0
+
+for k in [2, 5, 15]:
+	knn = KNeighborsClassifier(n_neighbors=k)
+	knn.fit(X_train, y_train)
+	pred = knn.predict(X_test)
+	accuracy = accuracy_score(y_test, pred)
+	
+	print(f"K={k} Accuracy: {accuracy:.2f}")
+

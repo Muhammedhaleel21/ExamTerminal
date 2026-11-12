@@ -1,0 +1,23 @@
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score
+
+categories = ['alt.atheism', 'soc.religion.christian', 'comp.graphics', 'sci.med']
+
+newsgroups_train = fetch_20newsgroups(subset='train', categories=categories)
+newsgroups_test = fetch_20newsgroups(subset='test', categories=categories)
+
+vectorizer = CountVectorizer()
+
+X_train = vectorizer.fit_transform(newsgroups_train.data)
+X_test = vectorizer.transform(newsgroups_test.data)
+
+mle_nb = MultinomialNB(alpha=1e-10).fit(X_train, newsgroups_train.target)
+map_nb = MultinomialNB(alpha=1.0).fit(X_train, newsgroups_train.target)
+
+mle_pred = mle_nb.predict(X_test)
+map_pred = map_nb.predict(X_test)
+
+print("MLE Accuracy:", accuracy_score(newsgroups_test.target, mle_pred))
+print("MAP Accuracy:", accuracy_score(newsgroups_test.target, map_pred))

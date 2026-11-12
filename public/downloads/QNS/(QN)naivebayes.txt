@@ -1,0 +1,59 @@
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+from sklearn.metrics import accuracy_score, f1_score
+import pandas as pd
+
+# Load dataset
+data = pd.read_csv("/content/20NewsGroups1.csv")
+
+# Select 4 categories
+categories = ['sci.space', 'rec.autos',
+              'comp.graphics', 'talk.politics.misc']
+
+filtered_data = data[data['category'].isin(categories)]
+
+x = filtered_data['text']
+y = filtered_data['category']
+
+# Split dataset
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.2, random_state=42, stratify=y
+)
+
+# Multinomial Vectorizer
+vec_multi = CountVectorizer()
+X_train_m = vec_multi.fit_transform(x_train)
+X_test_m = vec_multi.transform(x_test)
+
+# Bernoulli Vectorizer
+vec_bern = CountVectorizer(binary=True)
+X_train_b = vec_bern.fit_transform(x_train)
+X_test_b = vec_bern.transform(x_test)
+
+# Train models
+m_nb = MultinomialNB().fit(X_train_m, y_train)
+b_nb = BernoulliNB().fit(X_train_b, y_train)
+
+# Predictions
+m_pred = m_nb.predict(X_test_m)
+b_pred = b_nb.predict(X_test_b)
+
+# Compare Accuracy and F1-score
+print("Multinomial Naive Bayes")
+print("Accuracy:", accuracy_score(y_test, m_pred))
+print("F1 Score:", f1_score(y_test, m_pred, average='macro'))
+
+print("\nBernoulli Naive Bayes")
+print("Accuracy:", accuracy_score(y_test, b_pred))
+print("F1 Score:", f1_score(y_test, b_pred, average='macro'))
+
+# Predict a new sentence
+new_text = ["NASA is planning a new mission to explore Mars and space."]
+
+new_m = vec_multi.transform(new_text)
+new_b = vec_bern.transform(new_text)
+
+print("\nNew Sentence Prediction")
+print("Multinomial Prediction:", m_nb.predict(new_m)[0])
+print("Bernoulli Prediction:", b_nb.predict(new_b)[0])
