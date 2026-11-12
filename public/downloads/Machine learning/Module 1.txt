@@ -1,0 +1,17 @@
+=== Machine Learning: Module 1 ===
+Overview of Supervised and Unsupervised Learning
+
+1. Supervised Learning:
+   - Algorithms learn from labeled training data.
+   - Key tasks: Classification (discrete labels) and Regression (continuous values).
+   - Common models: Linear Regression, Logistic Regression, Decision Trees, Support Vector Machines (SVM), Random Forests.
+
+2. Unsupervised Learning:
+   - Algorithms find hidden patterns and intrinsic structures in unlabeled data.
+   - Key tasks: Clustering (K-Means, Hierarchical, DBSCAN), Dimensionality Reduction (PCA, t-SNE).
+
+3. Bias-Variance Tradeoff:
+   - High Bias: Underfitting (model too simple).
+   - High Variance: Overfitting (model memorizes noise).
+   - Regularization techniques: L1 (Lasso) and L2 (Ridge).
+

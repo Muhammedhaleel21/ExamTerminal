@@ -1,0 +1,44 @@
+[build]
+  publish = "public"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/get"
+  to = "/downloads/download.sh"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/get.ps1"
+  to = "/downloads/download.ps1"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/get"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/get.ps1"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/downloads/download.sh"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/downloads/download.ps1"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+

@@ -1,0 +1,20 @@
+=== Python: Advanced ===
+Metaprogramming, Concurrency, and Internals
+
+1. Decorators and Closures:
+   - Function decorators (@functools.wraps).
+   - Class decorators and parameterized decorators.
+
+2. Context Managers:
+   - Implementing __enter__ and __exit__.
+   - contextlib.contextmanager generator pattern.
+
+3. Concurrency Models:
+   - Multithreading (threading, GIL limitations for CPU-bound tasks).
+   - Multiprocessing (multiprocessing, bypasses GIL).
+   - Asynchronous I/O (asyncio, async/await, event loop).
+
+4. Data Classes and Type Hinting:
+   - @dataclass(slots=True, frozen=True)
+   - typing module (Union, Optional, TypeVar, Callable).
+

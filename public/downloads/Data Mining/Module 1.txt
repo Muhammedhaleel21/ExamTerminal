@@ -1,0 +1,13 @@
+=== Data Mining: Module 1 ===
+Data Preprocessing, Exploration, and Association Rules
+
+1. Data Cleaning & Preprocessing:
+   - Handling Missing Values: Mean/Median imputation, KNN imputation, drop rows.
+   - Outlier Detection: Z-Score, Interquartile Range (IQR), Isolation Forest.
+   - Data Transformation: Min-Max Normalization, Z-Score Standardization, One-Hot Encoding.
+
+2. Association Rule Mining:
+   - Support, Confidence, and Lift.
+   - Apriori Algorithm: Frequency itemset generation and join step.
+   - FP-Growth (Frequent Pattern Tree) algorithm for large transaction databases.
+

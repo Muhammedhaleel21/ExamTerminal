@@ -1,0 +1,19 @@
+=== Python: Basics ===
+Core Language Features and Data Structures
+
+1. Fundamental Types:
+   - int, float, bool, str
+   - Mutability:
+     * Immutable: int, float, str, tuple, frozenset
+     * Mutable: list, dict, set
+
+2. Control Flow:
+   - if / elif / else
+   - for item in iterable:
+   - while condition:
+   - try / except / else / finally
+
+3. List Comprehensions & Generator Expressions:
+   - squares = [x**2 for x in range(10) if x % 2 == 0]
+   - gen = (x**2 for x in range(10))
+

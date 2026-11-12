@@ -1,0 +1,25 @@
+/get
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/get.ps1
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/downloads/download.sh
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/downloads/download.ps1
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/downloads/manifest.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
+
