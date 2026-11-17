@@ -45,13 +45,32 @@ if (-not (Test-Path $targetDir)) {
 
 # Embedded pre-compiled file list
 $filesToDownload = @(
-    [PSCustomObject]@{ urlPath = 'Data%20Mining/Module%201.txt'; relativePath = 'Data Mining/Module 1.txt' },
-    [PSCustomObject]@{ urlPath = 'Data%20Mining/Questions.txt'; relativePath = 'Data Mining/Questions.txt' },
-    [PSCustomObject]@{ urlPath = 'Machine%20learning/Module%201.txt'; relativePath = 'Machine learning/Module 1.txt' },
-    [PSCustomObject]@{ urlPath = 'Machine%20learning/Module%202.txt'; relativePath = 'Machine learning/Module 2.txt' },
-    [PSCustomObject]@{ urlPath = 'Machine%20learning/Module%203.txt'; relativePath = 'Machine learning/Module 3.txt' },
-    [PSCustomObject]@{ urlPath = 'Python/Advanced.txt'; relativePath = 'Python/Advanced.txt' },
-    [PSCustomObject]@{ urlPath = 'Python/Basics.txt'; relativePath = 'Python/Basics.txt' }
+    [PSCustomObject]@{ urlPath = 'algorithm/factorial.txt'; relativePath = 'algorithm/factorial.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/fibonacci.txt'; relativePath = 'algorithm/fibonacci.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/fileconcurrent.txt'; relativePath = 'algorithm/fileconcurrent.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/matrixaddition.txt'; relativePath = 'algorithm/matrixaddition.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/palindrome.txt'; relativePath = 'algorithm/palindrome.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/prime.txt'; relativePath = 'algorithm/prime.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/reverse.txt'; relativePath = 'algorithm/reverse.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/stringlength.txt'; relativePath = 'algorithm/stringlength.txt' },
+    [PSCustomObject]@{ urlPath = 'algorithm/sumofdigit.txt'; relativePath = 'algorithm/sumofdigit.txt' },
+    [PSCustomObject]@{ urlPath = 'fileserver/fileserver.txt'; relativePath = 'fileserver/fileserver.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/factorial.txt'; relativePath = 'TCP/factorial.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/fibonacci.txt'; relativePath = 'TCP/fibonacci.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/matrix-addition.txt'; relativePath = 'TCP/matrix-addition.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/palindrome.txt'; relativePath = 'TCP/palindrome.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/prime.txt'; relativePath = 'TCP/prime.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/reverse.txt'; relativePath = 'TCP/reverse.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/stringlength.txt'; relativePath = 'TCP/stringlength.txt' },
+    [PSCustomObject]@{ urlPath = 'TCP/sumofdigit.txt'; relativePath = 'TCP/sumofdigit.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/factorial.txt'; relativePath = 'UDP/factorial.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/fibonacci.txt'; relativePath = 'UDP/fibonacci.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/matrixaddition.txt'; relativePath = 'UDP/matrixaddition.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/palindrome.txt'; relativePath = 'UDP/palindrome.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/prime.txt'; relativePath = 'UDP/prime.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/reverse.txt'; relativePath = 'UDP/reverse.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/stringlength.txt'; relativePath = 'UDP/stringlength.txt' },
+    [PSCustomObject]@{ urlPath = 'UDP/sumofdigit.txt'; relativePath = 'UDP/sumofdigit.txt' }
 )
 
 # Optional: Try to fetch latest manifest from the server if online

@@ -1,153 +1,501 @@
 {
-  "generatedAt": "2026-11-12T11:52:39.875Z",
-  "totalFiles": 7,
-  "totalFolders": 3,
+  "generatedAt": "2026-11-17T14:28:01.837Z",
+  "totalFiles": 26,
+  "totalFolders": 4,
   "folders": [
     {
-      "name": "Data Mining",
-      "count": 2,
+      "name": "algorithm",
+      "count": 9,
       "files": [
         {
-          "name": "Module 1.txt",
-          "folder": "Data Mining",
-          "relativePath": "Data Mining/Module 1.txt",
-          "urlPath": "Data%20Mining/Module%201.txt",
-          "size": 587,
-          "formattedSize": "587 B",
-          "lastModified": "2026-11-12T11:29:37.523Z"
+          "name": "factorial.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/factorial.txt",
+          "urlPath": "algorithm/factorial.txt",
+          "size": 1028,
+          "formattedSize": "1 KB",
+          "lastModified": "2026-11-17T03:35:44.413Z"
         },
         {
-          "name": "Questions.txt",
-          "folder": "Data Mining",
-          "relativePath": "Data Mining/Questions.txt",
-          "urlPath": "Data%20Mining/Questions.txt",
-          "size": 770,
-          "formattedSize": "770 B",
-          "lastModified": "2026-11-12T11:29:37.571Z"
+          "name": "fibonacci.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/fibonacci.txt",
+          "urlPath": "algorithm/fibonacci.txt",
+          "size": 1065,
+          "formattedSize": "1 KB",
+          "lastModified": "2026-11-17T03:36:48.000Z"
+        },
+        {
+          "name": "fileconcurrent.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/fileconcurrent.txt",
+          "urlPath": "algorithm/fileconcurrent.txt",
+          "size": 1607,
+          "formattedSize": "1.6 KB",
+          "lastModified": "2026-11-17T03:33:44.779Z"
+        },
+        {
+          "name": "matrixaddition.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/matrixaddition.txt",
+          "urlPath": "algorithm/matrixaddition.txt",
+          "size": 1359,
+          "formattedSize": "1.3 KB",
+          "lastModified": "2026-11-17T03:35:07.808Z"
+        },
+        {
+          "name": "palindrome.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/palindrome.txt",
+          "urlPath": "algorithm/palindrome.txt",
+          "size": 1338,
+          "formattedSize": "1.3 KB",
+          "lastModified": "2026-11-17T03:34:49.447Z"
+        },
+        {
+          "name": "prime.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/prime.txt",
+          "urlPath": "algorithm/prime.txt",
+          "size": 1205,
+          "formattedSize": "1.2 KB",
+          "lastModified": "2026-11-17T03:36:27.814Z"
+        },
+        {
+          "name": "reverse.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/reverse.txt",
+          "urlPath": "algorithm/reverse.txt",
+          "size": 1119,
+          "formattedSize": "1.1 KB",
+          "lastModified": "2026-11-17T03:35:24.903Z"
+        },
+        {
+          "name": "stringlength.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/stringlength.txt",
+          "urlPath": "algorithm/stringlength.txt",
+          "size": 1056,
+          "formattedSize": "1 KB",
+          "lastModified": "2026-11-17T03:36:21.157Z"
+        },
+        {
+          "name": "sumofdigit.txt",
+          "folder": "algorithm",
+          "relativePath": "algorithm/sumofdigit.txt",
+          "urlPath": "algorithm/sumofdigit.txt",
+          "size": 1206,
+          "formattedSize": "1.2 KB",
+          "lastModified": "2026-11-17T03:34:21.888Z"
         }
       ]
     },
     {
-      "name": "Machine learning",
-      "count": 3,
+      "name": "fileserver",
+      "count": 1,
       "files": [
         {
-          "name": "Module 1.txt",
-          "folder": "Machine learning",
-          "relativePath": "Machine learning/Module 1.txt",
-          "urlPath": "Machine%20learning/Module%201.txt",
-          "size": 768,
-          "formattedSize": "768 B",
-          "lastModified": "2026-11-12T11:29:37.637Z"
-        },
-        {
-          "name": "Module 2.txt",
-          "folder": "Machine learning",
-          "relativePath": "Machine learning/Module 2.txt",
-          "urlPath": "Machine%20learning/Module%202.txt",
-          "size": 798,
-          "formattedSize": "798 B",
-          "lastModified": "2026-11-12T11:29:37.681Z"
-        },
-        {
-          "name": "Module 3.txt",
-          "folder": "Machine learning",
-          "relativePath": "Machine learning/Module 3.txt",
-          "urlPath": "Machine%20learning/Module%203.txt",
-          "size": 683,
-          "formattedSize": "683 B",
-          "lastModified": "2026-11-12T11:29:37.741Z"
+          "name": "fileserver.txt",
+          "folder": "fileserver",
+          "relativePath": "fileserver/fileserver.txt",
+          "urlPath": "fileserver/fileserver.txt",
+          "size": 2835,
+          "formattedSize": "2.8 KB",
+          "lastModified": "2026-11-16T20:31:11.759Z"
         }
       ]
     },
     {
-      "name": "Python",
-      "count": 2,
+      "name": "TCP",
+      "count": 8,
       "files": [
         {
-          "name": "Advanced.txt",
-          "folder": "Python",
-          "relativePath": "Python/Advanced.txt",
-          "urlPath": "Python/Advanced.txt",
-          "size": 649,
-          "formattedSize": "649 B",
-          "lastModified": "2026-11-12T11:29:37.793Z"
+          "name": "factorial.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/factorial.txt",
+          "urlPath": "TCP/factorial.txt",
+          "size": 1720,
+          "formattedSize": "1.7 KB",
+          "lastModified": "2026-11-16T21:19:56.505Z"
         },
         {
-          "name": "Basics.txt",
-          "folder": "Python",
-          "relativePath": "Python/Basics.txt",
-          "urlPath": "Python/Basics.txt",
-          "size": 483,
-          "formattedSize": "483 B",
-          "lastModified": "2026-11-12T11:29:37.834Z"
+          "name": "fibonacci.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/fibonacci.txt",
+          "urlPath": "TCP/fibonacci.txt",
+          "size": 1927,
+          "formattedSize": "1.9 KB",
+          "lastModified": "2026-11-16T21:22:31.214Z"
+        },
+        {
+          "name": "matrix-addition.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/matrix-addition.txt",
+          "urlPath": "TCP/matrix-addition.txt",
+          "size": 2751,
+          "formattedSize": "2.7 KB",
+          "lastModified": "2026-11-16T21:18:37.883Z"
+        },
+        {
+          "name": "palindrome.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/palindrome.txt",
+          "urlPath": "TCP/palindrome.txt",
+          "size": 2016,
+          "formattedSize": "2 KB",
+          "lastModified": "2026-11-16T21:17:33.983Z"
+        },
+        {
+          "name": "prime.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/prime.txt",
+          "urlPath": "TCP/prime.txt",
+          "size": 2015,
+          "formattedSize": "2 KB",
+          "lastModified": "2026-11-16T21:21:27.268Z"
+        },
+        {
+          "name": "reverse.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/reverse.txt",
+          "urlPath": "TCP/reverse.txt",
+          "size": 1726,
+          "formattedSize": "1.7 KB",
+          "lastModified": "2026-11-16T21:19:16.746Z"
+        },
+        {
+          "name": "stringlength.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/stringlength.txt",
+          "urlPath": "TCP/stringlength.txt",
+          "size": 1732,
+          "formattedSize": "1.7 KB",
+          "lastModified": "2026-11-16T21:20:39.638Z"
+        },
+        {
+          "name": "sumofdigit.txt",
+          "folder": "TCP",
+          "relativePath": "TCP/sumofdigit.txt",
+          "urlPath": "TCP/sumofdigit.txt",
+          "size": 1774,
+          "formattedSize": "1.7 KB",
+          "lastModified": "2026-11-16T21:16:46.099Z"
+        }
+      ]
+    },
+    {
+      "name": "UDP",
+      "count": 8,
+      "files": [
+        {
+          "name": "factorial.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/factorial.txt",
+          "urlPath": "UDP/factorial.txt",
+          "size": 1829,
+          "formattedSize": "1.8 KB",
+          "lastModified": "2026-11-16T20:46:09.577Z"
+        },
+        {
+          "name": "fibonacci.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/fibonacci.txt",
+          "urlPath": "UDP/fibonacci.txt",
+          "size": 1976,
+          "formattedSize": "1.9 KB",
+          "lastModified": "2026-11-16T21:04:39.307Z"
+        },
+        {
+          "name": "matrixaddition.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/matrixaddition.txt",
+          "urlPath": "UDP/matrixaddition.txt",
+          "size": 3119,
+          "formattedSize": "3 KB",
+          "lastModified": "2026-11-16T20:42:22.264Z"
+        },
+        {
+          "name": "palindrome.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/palindrome.txt",
+          "urlPath": "UDP/palindrome.txt",
+          "size": 2112,
+          "formattedSize": "2.1 KB",
+          "lastModified": "2026-11-16T20:40:28.186Z"
+        },
+        {
+          "name": "prime.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/prime.txt",
+          "urlPath": "UDP/prime.txt",
+          "size": 2031,
+          "formattedSize": "2 KB",
+          "lastModified": "2026-11-16T20:50:04.248Z"
+        },
+        {
+          "name": "reverse.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/reverse.txt",
+          "urlPath": "UDP/reverse.txt",
+          "size": 1827,
+          "formattedSize": "1.8 KB",
+          "lastModified": "2026-11-16T20:44:02.362Z"
+        },
+        {
+          "name": "stringlength.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/stringlength.txt",
+          "urlPath": "UDP/stringlength.txt",
+          "size": 1848,
+          "formattedSize": "1.8 KB",
+          "lastModified": "2026-11-16T20:48:54.758Z"
+        },
+        {
+          "name": "sumofdigit.txt",
+          "folder": "UDP",
+          "relativePath": "UDP/sumofdigit.txt",
+          "urlPath": "UDP/sumofdigit.txt",
+          "size": 1891,
+          "formattedSize": "1.8 KB",
+          "lastModified": "2026-11-16T18:53:49.662Z"
         }
       ]
     }
   ],
   "files": [
     {
-      "name": "Module 1.txt",
-      "folder": "Data Mining",
-      "relativePath": "Data Mining/Module 1.txt",
-      "urlPath": "Data%20Mining/Module%201.txt",
-      "size": 587,
-      "formattedSize": "587 B",
-      "lastModified": "2026-11-12T11:29:37.523Z"
+      "name": "factorial.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/factorial.txt",
+      "urlPath": "algorithm/factorial.txt",
+      "size": 1028,
+      "formattedSize": "1 KB",
+      "lastModified": "2026-11-17T03:35:44.413Z"
     },
     {
-      "name": "Questions.txt",
-      "folder": "Data Mining",
-      "relativePath": "Data Mining/Questions.txt",
-      "urlPath": "Data%20Mining/Questions.txt",
-      "size": 770,
-      "formattedSize": "770 B",
-      "lastModified": "2026-11-12T11:29:37.571Z"
+      "name": "fibonacci.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/fibonacci.txt",
+      "urlPath": "algorithm/fibonacci.txt",
+      "size": 1065,
+      "formattedSize": "1 KB",
+      "lastModified": "2026-11-17T03:36:48.000Z"
     },
     {
-      "name": "Module 1.txt",
-      "folder": "Machine learning",
-      "relativePath": "Machine learning/Module 1.txt",
-      "urlPath": "Machine%20learning/Module%201.txt",
-      "size": 768,
-      "formattedSize": "768 B",
-      "lastModified": "2026-11-12T11:29:37.637Z"
+      "name": "fileconcurrent.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/fileconcurrent.txt",
+      "urlPath": "algorithm/fileconcurrent.txt",
+      "size": 1607,
+      "formattedSize": "1.6 KB",
+      "lastModified": "2026-11-17T03:33:44.779Z"
     },
     {
-      "name": "Module 2.txt",
-      "folder": "Machine learning",
-      "relativePath": "Machine learning/Module 2.txt",
-      "urlPath": "Machine%20learning/Module%202.txt",
-      "size": 798,
-      "formattedSize": "798 B",
-      "lastModified": "2026-11-12T11:29:37.681Z"
+      "name": "matrixaddition.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/matrixaddition.txt",
+      "urlPath": "algorithm/matrixaddition.txt",
+      "size": 1359,
+      "formattedSize": "1.3 KB",
+      "lastModified": "2026-11-17T03:35:07.808Z"
     },
     {
-      "name": "Module 3.txt",
-      "folder": "Machine learning",
-      "relativePath": "Machine learning/Module 3.txt",
-      "urlPath": "Machine%20learning/Module%203.txt",
-      "size": 683,
-      "formattedSize": "683 B",
-      "lastModified": "2026-11-12T11:29:37.741Z"
+      "name": "palindrome.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/palindrome.txt",
+      "urlPath": "algorithm/palindrome.txt",
+      "size": 1338,
+      "formattedSize": "1.3 KB",
+      "lastModified": "2026-11-17T03:34:49.447Z"
     },
     {
-      "name": "Advanced.txt",
-      "folder": "Python",
-      "relativePath": "Python/Advanced.txt",
-      "urlPath": "Python/Advanced.txt",
-      "size": 649,
-      "formattedSize": "649 B",
-      "lastModified": "2026-11-12T11:29:37.793Z"
+      "name": "prime.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/prime.txt",
+      "urlPath": "algorithm/prime.txt",
+      "size": 1205,
+      "formattedSize": "1.2 KB",
+      "lastModified": "2026-11-17T03:36:27.814Z"
     },
     {
-      "name": "Basics.txt",
-      "folder": "Python",
-      "relativePath": "Python/Basics.txt",
-      "urlPath": "Python/Basics.txt",
-      "size": 483,
-      "formattedSize": "483 B",
-      "lastModified": "2026-11-12T11:29:37.834Z"
+      "name": "reverse.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/reverse.txt",
+      "urlPath": "algorithm/reverse.txt",
+      "size": 1119,
+      "formattedSize": "1.1 KB",
+      "lastModified": "2026-11-17T03:35:24.903Z"
+    },
+    {
+      "name": "stringlength.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/stringlength.txt",
+      "urlPath": "algorithm/stringlength.txt",
+      "size": 1056,
+      "formattedSize": "1 KB",
+      "lastModified": "2026-11-17T03:36:21.157Z"
+    },
+    {
+      "name": "sumofdigit.txt",
+      "folder": "algorithm",
+      "relativePath": "algorithm/sumofdigit.txt",
+      "urlPath": "algorithm/sumofdigit.txt",
+      "size": 1206,
+      "formattedSize": "1.2 KB",
+      "lastModified": "2026-11-17T03:34:21.888Z"
+    },
+    {
+      "name": "fileserver.txt",
+      "folder": "fileserver",
+      "relativePath": "fileserver/fileserver.txt",
+      "urlPath": "fileserver/fileserver.txt",
+      "size": 2835,
+      "formattedSize": "2.8 KB",
+      "lastModified": "2026-11-16T20:31:11.759Z"
+    },
+    {
+      "name": "factorial.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/factorial.txt",
+      "urlPath": "TCP/factorial.txt",
+      "size": 1720,
+      "formattedSize": "1.7 KB",
+      "lastModified": "2026-11-16T21:19:56.505Z"
+    },
+    {
+      "name": "fibonacci.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/fibonacci.txt",
+      "urlPath": "TCP/fibonacci.txt",
+      "size": 1927,
+      "formattedSize": "1.9 KB",
+      "lastModified": "2026-11-16T21:22:31.214Z"
+    },
+    {
+      "name": "matrix-addition.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/matrix-addition.txt",
+      "urlPath": "TCP/matrix-addition.txt",
+      "size": 2751,
+      "formattedSize": "2.7 KB",
+      "lastModified": "2026-11-16T21:18:37.883Z"
+    },
+    {
+      "name": "palindrome.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/palindrome.txt",
+      "urlPath": "TCP/palindrome.txt",
+      "size": 2016,
+      "formattedSize": "2 KB",
+      "lastModified": "2026-11-16T21:17:33.983Z"
+    },
+    {
+      "name": "prime.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/prime.txt",
+      "urlPath": "TCP/prime.txt",
+      "size": 2015,
+      "formattedSize": "2 KB",
+      "lastModified": "2026-11-16T21:21:27.268Z"
+    },
+    {
+      "name": "reverse.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/reverse.txt",
+      "urlPath": "TCP/reverse.txt",
+      "size": 1726,
+      "formattedSize": "1.7 KB",
+      "lastModified": "2026-11-16T21:19:16.746Z"
+    },
+    {
+      "name": "stringlength.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/stringlength.txt",
+      "urlPath": "TCP/stringlength.txt",
+      "size": 1732,
+      "formattedSize": "1.7 KB",
+      "lastModified": "2026-11-16T21:20:39.638Z"
+    },
+    {
+      "name": "sumofdigit.txt",
+      "folder": "TCP",
+      "relativePath": "TCP/sumofdigit.txt",
+      "urlPath": "TCP/sumofdigit.txt",
+      "size": 1774,
+      "formattedSize": "1.7 KB",
+      "lastModified": "2026-11-16T21:16:46.099Z"
+    },
+    {
+      "name": "factorial.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/factorial.txt",
+      "urlPath": "UDP/factorial.txt",
+      "size": 1829,
+      "formattedSize": "1.8 KB",
+      "lastModified": "2026-11-16T20:46:09.577Z"
+    },
+    {
+      "name": "fibonacci.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/fibonacci.txt",
+      "urlPath": "UDP/fibonacci.txt",
+      "size": 1976,
+      "formattedSize": "1.9 KB",
+      "lastModified": "2026-11-16T21:04:39.307Z"
+    },
+    {
+      "name": "matrixaddition.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/matrixaddition.txt",
+      "urlPath": "UDP/matrixaddition.txt",
+      "size": 3119,
+      "formattedSize": "3 KB",
+      "lastModified": "2026-11-16T20:42:22.264Z"
+    },
+    {
+      "name": "palindrome.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/palindrome.txt",
+      "urlPath": "UDP/palindrome.txt",
+      "size": 2112,
+      "formattedSize": "2.1 KB",
+      "lastModified": "2026-11-16T20:40:28.186Z"
+    },
+    {
+      "name": "prime.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/prime.txt",
+      "urlPath": "UDP/prime.txt",
+      "size": 2031,
+      "formattedSize": "2 KB",
+      "lastModified": "2026-11-16T20:50:04.248Z"
+    },
+    {
+      "name": "reverse.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/reverse.txt",
+      "urlPath": "UDP/reverse.txt",
+      "size": 1827,
+      "formattedSize": "1.8 KB",
+      "lastModified": "2026-11-16T20:44:02.362Z"
+    },
+    {
+      "name": "stringlength.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/stringlength.txt",
+      "urlPath": "UDP/stringlength.txt",
+      "size": 1848,
+      "formattedSize": "1.8 KB",
+      "lastModified": "2026-11-16T20:48:54.758Z"
+    },
+    {
+      "name": "sumofdigit.txt",
+      "folder": "UDP",
+      "relativePath": "UDP/sumofdigit.txt",
+      "urlPath": "UDP/sumofdigit.txt",
+      "size": 1891,
+      "formattedSize": "1.8 KB",
+      "lastModified": "2026-11-16T18:53:49.662Z"
     }
   ]
 }

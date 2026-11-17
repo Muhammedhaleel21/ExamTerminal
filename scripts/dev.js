@@ -9,11 +9,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const publicDir = path.join(rootDir, 'public');
+const downloadsDir = path.join(publicDir, 'downloads');
 
 const PORT = process.env.PORT || 3000;
 
 // Ensure manifest and scripts are built
 build();
+
+// Automatically watch for file/folder changes in downloads folder during development
+let watchTimeout = null;
+try {
+  fs.watch(downloadsDir, { recursive: true }, (eventType, filename) => {
+    if (!filename) return;
+    const name = filename.toString();
+    if (name.endsWith('manifest.json') || name.endsWith('download.ps1') || name.endsWith('download.sh')) return;
+    clearTimeout(watchTimeout);
+    watchTimeout = setTimeout(() => {
+      console.log(`[Dev] Change detected in downloads (${name}). Updating manifest...`);
+      build();
+    }, 300);
+  });
+} catch (e) {
+  // Recursive watch might not be supported on all platforms/environments
+}
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
