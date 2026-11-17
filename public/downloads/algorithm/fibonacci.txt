@@ -1,0 +1,26 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive the number of terms (n) from the client using recvfrom().
+7. Initialize a = 0 and b = 1.
+8. Repeat the following steps for i = 0 to n - 1:
+   - Store a in fib[i].
+   - Calculate c = a + b.
+   - Assign a = b and b = c.
+9. Send the Fibonacci series to the client using sendto().
+10. Close the socket using close().
+11. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read the number of terms (n) from the user.
+6. Send n to the server using sendto().
+7. Receive the Fibonacci series from the server using recvfrom().
+8. Display the Fibonacci series using a for loop.
+9. Close the socket using close().
+10. Stop the program.

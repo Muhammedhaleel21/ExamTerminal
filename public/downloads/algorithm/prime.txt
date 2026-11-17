@@ -1,0 +1,28 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive an integer from the client using recvfrom().
+7. Initialize flag = 1.
+8. If the number is less than or equal to 1, set flag = 0.
+9. Check whether the number is divisible by any integer from 2 to num / 2:
+   - If num % i == 0, set flag = 0 and stop the loop.
+10. If flag = 1, store "Prime" in the result.
+11. Otherwise, store "Not Prime" in the result.
+12. Send the result to the client using sendto().
+13. Display the result.
+14. Close the socket using close().
+15. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read an integer from the user.
+6. Send the integer to the server using sendto().
+7. Receive the result from the server using recvfrom().
+8. Display whether the number is Prime or Not Prime.
+9. Close the socket using close().
+10. Stop the program.

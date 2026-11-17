@@ -1,0 +1,29 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive a string from the client using recvfrom().
+7. Remove the newline character from the received string.
+8. Initialize i = 0 and j = strlen(str) - 1.
+9. Compare the characters at positions i and j.
+10. If both characters are not equal, set flag = 0 and stop the comparison.
+11. Otherwise, increment i and decrement j.
+12. Repeat steps 9–11 until i becomes greater than or equal to j.
+13. If flag = 1, store "Palindrome" in the result.
+14. Otherwise, store "Not Palindrome" in the result.
+15. Send the result to the client using sendto().
+16. Close the socket using close().
+17. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read a string from the user using fgets().
+6. Send the string to the server using sendto().
+7. Receive the result from the server using recvfrom().
+8. Display whether the string is Palindrome or Not Palindrome.
+9. Close the socket using close().
+10. Stop the program.

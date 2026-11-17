@@ -1,0 +1,29 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive an integer from the client using recvfrom().
+7. Initialize sum = 0.
+8. Store the received number in a temporary variable.
+9. If the number is negative, convert it into a positive number.
+10. Repeat while the temporary number is greater than 0:
+    - Extract the last digit using temp % 10.
+    - Add the digit to sum.
+    - Remove the last digit using temp / 10.
+11. Send the sum to the client using sendto().
+12. Display the sum of digits.
+13. Close the socket using close().
+14. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read an integer from the user.
+6. Send the integer to the server using sendto().
+7. Receive the sum of digits from the server using recvfrom().
+8. Display the sum of digits.
+9. Close the socket using close().
+10. Stop the program.

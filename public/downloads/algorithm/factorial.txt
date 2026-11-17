@@ -1,0 +1,26 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive an integer from the client using recvfrom().
+7. Initialize fact = 1.
+8. Calculate the factorial using a for loop:
+   - Repeat from i = 1 to i <= num.
+   - Multiply fact = fact * i.
+9. Send the factorial result to the client using sendto().
+10. Display the factorial.
+11. Close the socket using close().
+12. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read an integer from the user.
+6. Send the integer to the server using sendto().
+7. Receive the factorial result from the server using recvfrom().
+8. Display the factorial.
+9. Close the socket using close().
+10. Stop the program.

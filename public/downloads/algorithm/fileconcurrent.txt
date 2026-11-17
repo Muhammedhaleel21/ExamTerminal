@@ -1,0 +1,36 @@
+Server Algorithm
+1. Start.
+2. Create a TCP socket using socket().
+3. Initialize the server address structure with IP address INADDR_ANY and port number 8080.
+4. Bind the socket to the specified address using bind().
+5. Listen for client connections using listen().
+6. Display "File Server Running".
+7. Repeat the following steps continuously:
+   1. Accept the client connection using accept().
+   2. Create a child process using fork() to handle the client.
+   3. In the child process:
+      - Close the server socket.
+      - Receive the filename from the client using recv().
+      - Open the requested file in read mode using fopen().
+      - Send the server PID to the client.
+      - If the file does not exist, send an appropriate error message.
+      - Otherwise:
+        - Read the file line by line using fgets().
+        - Send the file contents to the client using send().
+        - Close the file.
+      - Close the client socket.
+      - Terminate the child process using exit().
+   4. In the parent process, close the client socket.
+8. Stop.
+Client Algorithm
+1. Start.
+2. Create a TCP socket using socket().
+3. Initialize the server address with IP address 127.0.0.1 and port number 8080.
+4. Connect to the server using connect().
+5. Read the filename from the user.
+6. Send the filename to the server using send().
+7. Display the server response.
+8. Receive the file contents from the server using recv().
+9. Display the received file contents on the screen.
+10. Continue receiving until the server closes the connection.
+11. Close the socket using close().

@@ -1,0 +1,32 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive the number of rows (r) from the client using recvfrom().
+7. Receive the number of columns (c) from the client.
+8. Receive Matrix A from the client.
+9. Receive Matrix B from the client.
+10. Add the corresponding elements of both matrices:
+    - sum[i][j] = a[i][j] + b[i][j]
+11. Display the resultant matrix.
+12. Send the resultant matrix to the client using sendto().
+13. Close the socket using close().
+14. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read the number of rows and columns from the user.
+6. Read the elements of Matrix A.
+7. Read the elements of Matrix B.
+8. Send the number of rows (r) to the server using sendto().
+9. Send the number of columns (c) to the server.
+10. Send Matrix A to the server.
+11. Send Matrix B to the server.
+12. Receive the resultant matrix from the server using recvfrom().
+13. Display the resultant matrix.
+14. Close the socket using close().
+15. Stop the program.

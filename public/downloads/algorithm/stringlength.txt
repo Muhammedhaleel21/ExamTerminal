@@ -1,0 +1,26 @@
+Server Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the IP address as INADDR_ANY and port number as 8080.
+5. Bind the socket to the server address using bind().
+6. Receive a string from the client using recvfrom().
+7. Initialize i = 0.
+8. Count the characters using a while loop:
+   - Repeat while str[i] is not '\0' and not '\n'.
+   - Increment i by 1.
+9. Display the length of the string.
+10. Send the length to the client using sendto().
+11. Close the socket using close().
+12. Stop the program.
+Client Algorithm:
+1. Start the program.
+2. Create a UDP socket using socket().
+3. Initialize the server address structure.
+4. Assign the server IP address as 127.0.0.1 and port number as 8080.
+5. Read a string from the user using fgets().
+6. Send the string to the server using sendto().
+7. Receive the length of the string from the server using recvfrom().
+8. Display the length of the string.
+9. Close the socket using close().
+10. Stop the program.
