@@ -1,0 +1,89 @@
+//server.c
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+
+#define PORT 8080
+#define MAX 1024
+
+int main()
+{
+    int sockfd, i = 0;
+    char str[MAX];
+
+    struct sockaddr_in server_addr, client_addr;
+    socklen_t len = sizeof(client_addr);
+
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(PORT);
+
+    bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
+
+    printf("UDP Server Running\n");
+
+    recvfrom(sockfd, str, MAX, 0,
+             (struct sockaddr *)&client_addr, &len);
+
+    printf("Received string: %s\n", str);
+
+    while(str[i] != '\0' && str[i] != '\n')
+    {
+        i++;
+    }
+
+    printf("Length of string: %d\n", i);
+
+    sendto(sockfd, &i, sizeof(i), 0,
+           (struct sockaddr *)&client_addr, len);
+
+    printf("Length sent to client.\n");
+
+    close(sockfd);
+
+    return 0;
+}
+
+
+//client.c
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+
+#define PORT 8080
+#define MAX 1024
+
+int main()
+{
+    int sockfd, length;
+    char str[MAX];
+
+    struct sockaddr_in server_addr;
+    socklen_t len = sizeof(server_addr);
+
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(PORT);
+    server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+
+    printf("Enter a string:\n");
+    fgets(str, MAX, stdin);
+
+    sendto(sockfd, str, sizeof(str), 0,
+           (struct sockaddr *)&server_addr, len);
+
+    recvfrom(sockfd, &length, sizeof(length), 0,
+             (struct sockaddr *)&server_addr, &len);
+
+    printf("\nLength of string = %d\n", length);
+
+    close(sockfd);
+
+    return 0;
+}
+

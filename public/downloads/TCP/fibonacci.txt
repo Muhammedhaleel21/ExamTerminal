@@ -1,0 +1,100 @@
+//server.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+
+#define PORT 8080
+#define MAX 100
+
+int main()
+{
+    int server_fd, new_socket;
+    struct sockaddr_in address;
+    int addrlen = sizeof(address);
+    int n;
+    int fib[MAX];
+
+    server_fd = socket(AF_INET, SOCK_STREAM, 0);
+
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(PORT);
+
+    bind(server_fd, (struct sockaddr *)&address, sizeof(address));
+    listen(server_fd, 3);
+
+    printf("Waiting for client connection...\n");
+
+    new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t *)&addrlen);
+
+    read(new_socket, &n, sizeof(int));
+
+    fib[0] = 0;
+    fib[1] = 1;
+
+    for(int i = 2; i < n; i++)
+    {
+        fib[i] = fib[i-1] + fib[i-2];
+    }
+
+    write(new_socket, fib, sizeof(fib));
+
+    printf("Fibonacci Series Sent to Client:\n");
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d ", fib[i]);
+    }
+
+    close(new_socket);
+    close(server_fd);
+
+    return 0;
+}
+
+
+//client.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+
+#define PORT 8080
+#define MAX 100
+
+int main()
+{
+    int sock = 0;
+    struct sockaddr_in serv_addr;
+    int n;
+    int fib[MAX];
+
+    sock = socket(AF_INET, SOCK_STREAM, 0);
+
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_port = htons(PORT);
+
+    inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr);
+
+    connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
+
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    write(sock, &n, sizeof(int));
+
+    read(sock, fib, sizeof(fib));
+
+    printf("\nFibonacci Series Received from Server:\n");
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d ", fib[i]);
+    }
+
+    close(sock);
+
+    return 0;
+}
+
